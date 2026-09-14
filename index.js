@@ -11,9 +11,9 @@ const PORT = 4000;
 
 // A plain health-check route, handy for confirming the server is up
 
-app.get("/", (req, res) => {
-    res.send("Bill Assistant server is running");
-});
+// app.get("/", (req, res) => {
+//     res.send("Bill Assistant server is running");
+// });
 
 //Build the GraphQL server by handing Apollo our schema + resolvers.
 // It now understands askBill and knows which function answers it.
@@ -36,6 +36,9 @@ await server.start();
 // expressMiddleware hands those request to Apollo. GraphQL requests arrive as JSON, so both are needed.
 
 app.use("/graphql", express.json(), expressMiddleware(server));
+
+// Connect the front-end
+app.use(express.static("public"));
 
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);

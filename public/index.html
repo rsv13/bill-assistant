@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Bill Assistant</title>
+</head>
+<body>
+  <main>
+    <h1>Bill Assistant</h1>
+    <p>Paste your bill, ask a question, and get a plain-English answer.</p>
+
+    <label for="bill">Your bill</label>
+    <textarea id="bill" rows="10" placeholder="Paste the text of your bill here..."></textarea>
+
+    <label for="question">Your question</label>
+    <input id="question" type="text" placeholder="e.g. Why is my bill higher than last month?" />
+
+    <button id="askButton">Ask</button>
+
+    <div id="answer"></div>
+
+    <script src="app.js"></script>
+  </main>
+</body>
+</html>
