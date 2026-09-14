@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/rsv13/bill-assistant#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "@apollo/server": "^5.5.1",
+    "express": "^5.2.1",
+    "graphql": "^16.14.2"
   }
 }
